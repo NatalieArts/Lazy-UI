@@ -8,6 +8,9 @@ function lui_canvas(_parent = -1){
 		canvas_max_width: infinity,
 		canvas_max_height: infinity,
 		canvas_padding: [0,0,0,0],
+		element_alignment: fa_center,
+		element_padding: [8,8,8,8],
+		elements: [],
 		children: [],
 		
 		//offsets
@@ -88,15 +91,44 @@ function lui_canvas(_parent = -1){
 			return max(_h,canvas_min_height)
 		},
 		
+		//elements
+		add_element: function(_element){
+			array_push(elements,_element)
+			return _element
+		},
+		
 		//child canvases
 		add_child: function(){
 		 var _child = lui_canvas(self)
 		 array_push(children,_child)
 			return _child
 		},
+		check_elements: function(){
+			
+			for (var i = 0; i < array_length(children); ++i) {
+			    children[i].check_elements()
+			}
+			var _min_h = 0
+			
+			var _space_x = 0
+			var _space_y = 0
+			for (var i = 0; i < array_length(elements); ++i) {
+				elements[i].check(_space_x,_space_y)
+				_min_h = max(_min_h,elements[i].height)
+				 _space_x+= elements[i].width+element_padding[2]
+				if _space_x+elements[i].width>=get_w(){
+					_space_x=0
+					_space_y+= _min_h+element_padding[3]
+				}
+			}
+		},
 		
 		draw: function(){
 			draw_sprite_stretched(spr_LUI_box,0,get_x(), get_y(),get_w(),get_h())
+			
+			for (var i = 0; i < array_length(elements); ++i) {
+			    elements[i].draw()
+			}
 			
 			for (var i = 0; i < array_length(children); ++i) {
 			    children[i].draw()

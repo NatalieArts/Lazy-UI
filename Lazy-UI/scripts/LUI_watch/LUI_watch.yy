@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"LUI_watch",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"LUI_watch",
+  "parent":{
+    "name":"Lazy-UI",
+    "path":"folders/Lazy-UI.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -5,3 +5,4 @@
 #macro LUI_RES_1080 [1920,1080]
 #macro LUI_RES_1440 [2560,1440]
 #macro LUI_RES_4k [3840,2160]
+#macro LUI global

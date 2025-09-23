@@ -1,7 +1,7 @@
 #macro LUI_INPUT global.__LUI_INPUTS_STATUS
 #macro LUI_NO_INPUT 0
-#macro LUI_HOLD 1
-#macro LUI_CLICK 2
+#macro LUI_HOLD 2
+#macro LUI_CLICK 1
 #macro LUI_DEFAULT global.__LUI_DEFAULT_BINDINGS
 #macro LUI_BIND_KB 0
 #macro LUI_BIND_MOUSE 1
@@ -92,15 +92,15 @@ function __LUI_make_input_status(_default_binding,_bind_type){
 }
 
 function __LUI_poll_device_information(){
+	LUI_INPUT[0].status = mouse_check_button_released(LUI_INPUT[0].keybind)
 	LUI_DEVICE.mouse_window_x = window_mouse_get_x()
 	LUI_DEVICE.mouse_window_y = window_mouse_get_y()
 	LUI_DEVICE.window_width = window_get_width()
 	LUI_DEVICE.window_height = window_get_height()
-	static ts_count = 0
-	ts_count++
+
 	if LUI_SETTINGS.manage_application_surface{
 		surface_resize(application_surface, LUI_DEVICE.window_width, LUI_DEVICE.window_height)	
 		display_set_gui_size(LUI_DEVICE.window_width, LUI_DEVICE.window_height)
-		show_debug_message("Time Source: "+string(ts_count))
+		
 	}
 }
