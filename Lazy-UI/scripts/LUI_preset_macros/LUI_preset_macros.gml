@@ -1,0 +1,7 @@
+#macro LUI_RES_SN [256,240]
+#macro LUI_RES_R64 [320,240]
+#macro LUI_RES_480 [640,480]
+#macro LUI_RES_720 [1280,720]
+#macro LUI_RES_1080 [1920,1080]
+#macro LUI_RES_1440 [2560,1440]
+#macro LUI_RES_4k [3840,2160]

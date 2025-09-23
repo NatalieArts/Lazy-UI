@@ -9,7 +9,11 @@
     "name":"Default",
   },
   "defaultScriptType":1,
-  "Folders":[],
+  "Folders":[
+    {"$GMFolder":"","%Name":"Lazy-UI","folderPath":"folders/Lazy-UI.yy","name":"Lazy-UI","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"LUI Scripts","folderPath":"folders/Lazy-UI/LUI Scripts.yy","name":"LUI Scripts","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"LUI Helper Sprites","folderPath":"folders/Lazy-UI/LUI Helper Sprites.yy","name":"LUI Helper Sprites","resourceType":"GMFolder","resourceVersion":"2.0",},
+  ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[],
   "isEcma":false,
@@ -19,12 +23,17 @@
   },
   "name":"Lazy-UI",
   "resources":[
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"obj_LUI_demo","path":"objects/obj_LUI_demo/obj_LUI_demo.yy",},},
+    {"id":{"name":"rm_LUI_demo","path":"rooms/rm_LUI_demo/rm_LUI_demo.yy",},},
+    {"id":{"name":"LUI_canvas","path":"scripts/LUI_canvas/LUI_canvas.yy",},},
+    {"id":{"name":"LUI_core","path":"scripts/LUI_core/LUI_core.yy",},},
+    {"id":{"name":"LUI_preset_macros","path":"scripts/LUI_preset_macros/LUI_preset_macros.yy",},},
+    {"id":{"name":"spr_LUI_box","path":"sprites/spr_LUI_box/spr_LUI_box.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_LUI_demo","path":"rooms/rm_LUI_demo/rm_LUI_demo.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
